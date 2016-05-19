@@ -18,7 +18,6 @@ namespace SpongeCity.Assess.DAL.DBModels
         public string DisplayName { get; set; }
         public string Unit { get; set; }
         public int DataStatus { get; set; }
-        
         public virtual ICollection<KPIData> KPIDatas { get; set; }
         [ForeignKey("KpiId")]
         public virtual KPI Kpi { get; set; }

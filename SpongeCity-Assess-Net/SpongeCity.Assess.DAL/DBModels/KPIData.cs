@@ -19,10 +19,8 @@ namespace SpongeCity.Assess.DAL.DBModels
         public int Pid { get; set; }
         public double NumricValue { get; set; }
         public string TextValue { get; set; }
-        [ForeignKey("SubCategoryId")]
-        public virtual SubCategory SubCategory { get; set; }
-        [ForeignKey("KpiId")]
-        public virtual KPI Kpi { get; set; }
+        //[ForeignKey("KpiId")]
+        //public virtual KPI Kpi { get; set; }
         [ForeignKey("Pid")]
         public virtual KPIParam KPIParam { get; set; }
 

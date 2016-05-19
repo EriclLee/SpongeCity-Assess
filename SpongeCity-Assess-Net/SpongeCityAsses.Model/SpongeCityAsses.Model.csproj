@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ActivityModel.cs" />
     <Compile Include="CategoryModel.cs" />
+    <Compile Include="ChartData.cs" />
     <Compile Include="KPIModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubCategoryModel.cs" />

@@ -35,5 +35,8 @@ namespace SpongeCity.Assess.DAL.DBModels
         public virtual Category Category{get;set;}
 
         public virtual ICollection<View> Views { get; set; }
+
+        public virtual ICollection<KPIParam> KPIParams { get; set; }
+        
     }
 }

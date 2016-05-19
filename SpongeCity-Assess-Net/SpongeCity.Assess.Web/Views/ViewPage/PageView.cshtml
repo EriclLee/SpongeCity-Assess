@@ -11,7 +11,11 @@
                         @foreach (var item in Model.Activities)
                         {
                             <div class="col-md-@item.Col_md_Count">
-                                @{Html.RenderAction(item.Action, item.Route);}
+                                @{Html.RenderAction(item.Action, item.Route,
+                                            new { subCategoryId=ViewBag.SubCategoryId,
+                                                viewId =ViewBag.ViewId,
+                                                kpiId =ViewBag.KpiId,
+                                                categoryId =ViewBag.CategoryId });}
                             </div>
                         }
                     </div>
