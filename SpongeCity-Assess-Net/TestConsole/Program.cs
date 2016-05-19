@@ -21,7 +21,7 @@ namespace TestConsole
                 {
                     Console.WriteLine(item.DisplayName+item.IsShow);
                 }
-                Console.WriteLine("End");
+                Console.WriteLine("Endd");
                 Console.Read();
             }
         }
