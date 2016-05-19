@@ -15,6 +15,10 @@ namespace SpongeCity.Assess.Web.Controllers
         {
             ViewModel vm = new ViewModel();
             ViewBLL bll = new ViewBLL();
+            ViewBag.SubCategoryId = subCategoryId;
+            ViewBag.ViewId = viewId;
+            ViewBag.KpiId = kpiId;
+            ViewBag.CategoryId = categoryId;
             vm = bll.GetViewbyViewId(viewId,kpiId, categoryId);
             return PartialView(vm);
         }
