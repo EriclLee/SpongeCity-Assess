@@ -19,6 +19,8 @@ namespace SpongeCity.Assess.DAL
         public DbSet<DBModels.View> Views { get; set; }
         public DbSet<DBModels.Activity> Activitys { get; set; }
         public DbSet<DBModels.SubCategory> SubCategorys { get; set; }
+        public DbSet<DBModels.KPIParam> KPIParams { get; set; }
+        public DbSet<DBModels.KPIData> KPIDatas { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

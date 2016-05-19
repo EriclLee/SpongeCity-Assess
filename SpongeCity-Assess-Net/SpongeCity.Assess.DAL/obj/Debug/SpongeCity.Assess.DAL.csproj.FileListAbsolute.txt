@@ -18,3 +18,13 @@ C:\SpongeCity-Assess\SpongeCity.Assess.DAL\bin\Debug\EntityFramework.SqlServer.x
 C:\SpongeCity-Assess\SpongeCity.Assess.DAL\obj\Debug\SpongeCity.Assess.DAL.csprojResolveAssemblyReference.cache
 C:\SpongeCity-Assess\SpongeCity.Assess.DAL\obj\Debug\SpongeCity.Assess.DAL.dll
 C:\SpongeCity-Assess\SpongeCity.Assess.DAL\obj\Debug\SpongeCity.Assess.DAL.pdb
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\bin\Debug\SpongeCity.Assess.DAL.dll.config
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\bin\Debug\SpongeCity.Assess.DAL.dll
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\bin\Debug\SpongeCity.Assess.DAL.pdb
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\bin\Debug\EntityFramework.dll
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\bin\Debug\EntityFramework.xml
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\obj\Debug\SpongeCity.Assess.DAL.csprojResolveAssemblyReference.cache
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\obj\Debug\SpongeCity.Assess.DAL.dll
+C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Assess.DAL\obj\Debug\SpongeCity.Assess.DAL.pdb
