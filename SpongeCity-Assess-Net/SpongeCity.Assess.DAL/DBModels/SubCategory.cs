@@ -42,5 +42,6 @@ namespace SpongeCity.Assess.DAL.DBModels
         public virtual SubCategory Parent { get; set; }
 
         public virtual ICollection<SubCategory> SubCategorys { get; set; }
+        
     }
 }

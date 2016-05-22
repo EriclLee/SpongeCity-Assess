@@ -53,6 +53,7 @@
     <Compile Include="DBModels\Activity.cs" />
     <Compile Include="DBModels\Category.cs" />
     <Compile Include="DBModels\KPI.cs" />
+    <Compile Include="DBModels\KPIReport.cs" />
     <Compile Include="DBModels\KPIData.cs" />
     <Compile Include="DBModels\SubCategory.cs" />
     <Compile Include="DBModels\ViewTemplate.cs" />

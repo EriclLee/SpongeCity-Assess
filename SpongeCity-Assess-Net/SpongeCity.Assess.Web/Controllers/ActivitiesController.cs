@@ -34,5 +34,10 @@ namespace SpongeCity.Assess.Web.Controllers
             ViewBag.CategoryId = categoryId;
             return PartialView();
         }
+
+        public ActionResult AzureDeckerAdmin(int subCategoryId, int viewId, int kpiId, int categoryId)
+        {
+            return PartialView();
+        }
     }
 }

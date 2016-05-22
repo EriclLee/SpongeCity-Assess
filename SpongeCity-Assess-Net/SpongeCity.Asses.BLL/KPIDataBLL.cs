@@ -55,18 +55,10 @@ namespace SpongeCity.Asses.BLL
             chartData.XaixData = XaixData;
             return chartData;
         }
+
+        public string GetReportData(int subCategoryId, int viewId, int kpiId, int categoryId)
+        {
+            return null;
+        }
     }
-
-    //public string GetReportData(int subCategoryId, int viewId, int kpiId, int categoryId)
-    //{
-    //    string content;
-    //    List<string> XaixData = new List<string>();
-    //    List<List<double>> KpiData = new List<List<double>>();
-    //    using (AssessDBContext db = new AssessDBContext())
-    //    {
-    //        var filepath = db.SubCategorys.FirstOrDefault(s => s.ID == subCategoryId);
-
-    //    }
-    //    return content;
-    //}
 }
