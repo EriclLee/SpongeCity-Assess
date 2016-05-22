@@ -4,7 +4,7 @@
         <a id="main-content"></a>
         <div class="tabs">
         </div>
-        <div class="region">
+        <div class="region region-content">
             <div class="block block-system" id="block-system-main">
                 <div id="activityDiv" class="">
                     <div class="row">
@@ -15,7 +15,7 @@
                                             new { subCategoryId=ViewBag.SubCategoryId,
                                                 viewId =ViewBag.ViewId,
                                                 kpiId =ViewBag.KpiId,
-                                                categoryId =ViewBag.CategoryId });}
+                                                categoryId =ViewBag.CategoryId, rnd=DateTime.Now.Ticks });}
                             </div>
                         }
                     </div>

@@ -23,6 +23,6 @@
     <h2>@Model.DisplayName</h2>
     if (!string.IsNullOrEmpty(Model.ReportUrl))
     {
-        <iframe src="~/Report/@Model.ReportUrl" style="border:none; width:100%" scrolling="no" onload="Javascript:SetWinHeight(this)"></iframe>
+        <iframe src="~/Report/@Model.ReportUrl" style="border:none; background-color:white; width:100%" scrolling="no" onload="Javascript:SetWinHeight(this)"></iframe>
     }
 }
