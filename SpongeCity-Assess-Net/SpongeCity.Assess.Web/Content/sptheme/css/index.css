@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 body{
 	font-family: "\5FAE\8F6F\96C5\9ED1";
@@ -274,7 +274,7 @@ body{
 .sk-wrapper{
 	width: 800px;
 	height: 80px;
-	margin: 30px auto;
+	margin: auto 0px 30px auto;
 	color: #fff;
 }
 .sk-wrapper .sk{

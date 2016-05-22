@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpongeCity.Asses.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -37,7 +38,9 @@ namespace SpongeCity.Assess.Web.Controllers
 
         public ActionResult AzureDeckerAdmin(int subCategoryId, int viewId, int kpiId, int categoryId)
         {
-            return PartialView();
+            KPIDataBLL bll = new KPIDataBLL();
+            var report = bll.GetReportData(subCategoryId, viewId, kpiId, categoryId);
+            return PartialView(report);
         }
     }
 }

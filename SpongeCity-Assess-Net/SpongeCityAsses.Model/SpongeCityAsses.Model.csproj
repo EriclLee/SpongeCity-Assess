@@ -45,6 +45,7 @@
     <Compile Include="ChartData.cs" />
     <Compile Include="KPIModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportModel.cs" />
     <Compile Include="SubCategoryModel.cs" />
     <Compile Include="ViewModel.cs" />
     <Compile Include="VTModel.cs" />

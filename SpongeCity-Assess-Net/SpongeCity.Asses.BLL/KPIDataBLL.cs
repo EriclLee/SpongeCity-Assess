@@ -56,9 +56,39 @@ namespace SpongeCity.Asses.BLL
             return chartData;
         }
 
-        public string GetReportData(int subCategoryId, int viewId, int kpiId, int categoryId)
+        public ReportModel GetReportData(int subCategoryId, int viewId, int kpiId, int categoryId)
         {
-            return null;
+            ReportModel report = null;
+            using (AssessDBContext db = new AssessDBContext())
+            {
+                if (subCategoryId == 0)
+                {
+                    if (viewId == 0)
+                    {
+                        if (kpiId == 0)
+                        {
+                            kpiId = db.KPIs.FirstOrDefault(s => s.CategoryId == categoryId).ID;
+                        }
+                        viewId = db.Views.FirstOrDefault(s => s.KpiId == kpiId).ID;
+                    }
+                    subCategoryId = db.SubCategorys.FirstOrDefault(s => s.ViewId == viewId).ID;
+                }
+                var reportQ = db.KPIReports.FirstOrDefault(s=>s.SubCategoryId == subCategoryId);
+                if (reportQ != null)
+                {
+                    report = new ReportModel() {
+                        ID=reportQ.ID,
+                        DisplayName = reportQ.DisplayName,
+                        Name = reportQ.Name,
+                        CreatTime = reportQ.CreatTime,
+                        KpiId = reportQ.KpiId,
+                        ReportUrl = reportQ.ReportUrl,
+                        ReportContent = reportQ.ReportContent,
+                        SubCategoryId = reportQ.SubCategoryId
+                    };
+                }
+            }
+            return report;
         }
     }
 }
