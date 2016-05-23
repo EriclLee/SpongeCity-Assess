@@ -1,0 +1,117 @@
+﻿<div style="width:100%;height:270px; background-color:#fff">
+    <div id="auto_chart_0" style="width: 100%; height: 270px; position: relative; background-color: #fff;"></div>
+</div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    myChart_auto_chart_0 = echarts.init(document.getElementById('auto_chart_0'));
+    var axisData = [];
+    var CODData = [];
+    var NH3_NData = [];
+    var CODMnData = [];
+    var TPData = [];
+    var TNData = [];
+    var DOData = [];
+    var SSData = [];
+    $.ajax({
+        url: "/ActivityData/GetChildChartData?subCategoryId=@ViewBag.SubCategoryId&viewId=@ViewBag.ViewId&kpiId=@ViewBag.KpiId&categoryId=@ViewBag.CategoryId&sort=1",
+        type: "get",
+        async: false,
+        dataType: "json",
+        data: { "paramS": "26,29,27,30,28,32,36", "rnd": Math.random() },
+        success: function (data) {
+            axisData = data.XD;
+            CODData = data.KD[0];
+            NH3_NData = data.KD[1];
+            CODMnData = data.KD[2];
+            TPData = data.KD[3];
+            TNData = data.KD[4];
+            DOData = data.KD[5];
+            SSData = data.KD[6];
+        },
+        error: function (data) {
+            alert("Error");
+            rtn = false;
+        }
+    });
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '上游参数1',
+        },
+        tooltip: {
+            trigger: 'axis',
+            formatter: function (params) {
+                if (params[0] == null) {
+                    return (params.data[0].cast);
+                }
+                output = params[0].name + '<br/>';
+                for (var i = 0; i < params.length; i++) {
+                    output += params[i].seriesName + " : " + params[i].value[1] + params[i].value[2] + '<br/>';
+                }
+                return output;
+            }
+        },
+        dataZoom: {
+            show: true,
+            start: 0,
+            orient: 'horizontal'
+        },
+        legend: {
+            data: ['化学需氧量', '氨氮', '高锰酸盐指数', '总磷', '总氮', '溶解氧', '悬浮物', ],
+            top: 20,
+
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: axisData
+
+            },
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: ' ',
+                axisLabel: {
+                    formatter: '{value}mg/L'
+                },
+
+            },
+
+        ],
+        series: [{
+            name: '化学需氧量',
+            type: 'bar',
+            data: CODData,
+        }, {
+            name: '氨氮',
+            type: 'bar',
+            data: NH3_NData,
+        }, {
+            name: '高锰酸盐指数',
+            type: 'bar',
+            data: CODMnData,
+        }, {
+            name: '总磷',
+            type: 'bar',
+            data: TPData,
+        }, {
+            name: '总氮',
+            type: 'bar',
+            data: TNData,
+        }, {
+            name: '溶解氧',
+            type: 'bar',
+            data: DOData,
+        }, {
+            name: '悬浮物',
+            type: 'bar',
+            data: SSData,
+        }, ]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart_auto_chart_0.setOption(option);
+    myChart_auto_chart_0.group = 'group1';
+</script>

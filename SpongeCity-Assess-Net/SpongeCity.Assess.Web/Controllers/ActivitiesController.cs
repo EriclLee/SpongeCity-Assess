@@ -73,8 +73,8 @@ namespace SpongeCity.Assess.Web.Controllers
             return PartialView();
         }
 
-        //地表水环境质量：参数1
-        public ActionResult RiverWaterEnvironmentParam1(int subCategoryId, int viewId, int kpiId, int categoryId)
+        //地表水环境质量:上游参数1
+        public ActionResult UpRiverWaterEnvironmentParam1(int subCategoryId, int viewId, int kpiId, int categoryId)
         {
             ViewBag.SubCategoryId = subCategoryId;
             ViewBag.ViewId = viewId;
@@ -83,8 +83,28 @@ namespace SpongeCity.Assess.Web.Controllers
             return PartialView();
         }
 
-        //地表水环境质量：参数2
-        public ActionResult RiverWaterEnvironmentParam2(int subCategoryId, int viewId, int kpiId, int categoryId)
+        //地表水环境质量：上游参数2
+        public ActionResult UpRiverWaterEnvironmentParam2(int subCategoryId, int viewId, int kpiId, int categoryId)
+        {
+            ViewBag.SubCategoryId = subCategoryId;
+            ViewBag.ViewId = viewId;
+            ViewBag.KpiId = kpiId;
+            ViewBag.CategoryId = categoryId;
+            return PartialView();
+        }
+
+        //地表水环境质量:下游参数1
+        public ActionResult DownRiverWaterEnvironmentParam1(int subCategoryId, int viewId, int kpiId, int categoryId)
+        {
+            ViewBag.SubCategoryId = subCategoryId;
+            ViewBag.ViewId = viewId;
+            ViewBag.KpiId = kpiId;
+            ViewBag.CategoryId = categoryId;
+            return PartialView();
+        }
+
+        //地表水环境质量：下游参数2
+        public ActionResult DownRiverWaterEnvironmentParam2(int subCategoryId, int viewId, int kpiId, int categoryId)
         {
             ViewBag.SubCategoryId = subCategoryId;
             ViewBag.ViewId = viewId;

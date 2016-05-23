@@ -10,5 +10,7 @@ namespace SpongeCityAsses.Model
     {
         public List<string> XaixData { get; set; }
         public List<List<double>> KpiData { get; set; }
+
+        public List<string> LegendData { get; set; }
     }
 }
