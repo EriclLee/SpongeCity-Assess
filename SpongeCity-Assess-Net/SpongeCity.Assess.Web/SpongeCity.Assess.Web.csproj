@@ -366,6 +366,7 @@
     <Content Include="Views\Activities\In_Out_Water.cshtml" />
     <Content Include="Views\Report\AzureDeckerAdmin.cshtml" />
     <Content Include="Views\Activities\AzureDeckerAdmin.cshtml" />
+    <Content Include="Views\Activities\GroundWaterLevel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\ActivityData\" />

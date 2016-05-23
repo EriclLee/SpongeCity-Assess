@@ -42,5 +42,14 @@ namespace SpongeCity.Assess.Web.Controllers
             var report = bll.GetReportData(subCategoryId, viewId, kpiId, categoryId);
             return PartialView(report);
         }
+
+        public ActionResult GroundWaterLevel(int subCategoryId, int viewId, int kpiId, int categoryId)
+        {
+            ViewBag.SubCategoryId = subCategoryId;
+            ViewBag.ViewId = viewId;
+            ViewBag.KpiId = kpiId;
+            ViewBag.CategoryId = categoryId;
+            return PartialView();
+        }
     }
 }

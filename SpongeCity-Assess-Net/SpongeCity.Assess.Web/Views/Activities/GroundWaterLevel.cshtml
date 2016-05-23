@@ -1,0 +1,96 @@
+﻿<div style="width:100%;height:270px; background-color:#fff">
+    <div id="auto_chart_0" style="width: 100%; height: 270px; position: relative; background-color: #fff;"></div>
+</div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    myChart_auto_chart_0 = echarts.init(document.getElementById('auto_chart_0'));
+    var axisData = [];
+    var rainData = [];
+    var streamFlowData = [];
+    $.ajax({
+        url: "/ActivityData/GetChartData?subCategoryId=@ViewBag.SubCategoryId&viewId=@ViewBag.ViewId&kpiId=@ViewBag.KpiId&categoryId=@ViewBag.CategoryId",
+        type: "get",
+        async: false,
+        dataType: "json",
+        data: { "paramS": "1,2", "rnd": Math.random() },
+        success: function (data) {
+            axisData = data.XD;
+            rainData = data.KD[0];
+            streamFlowData = data.KD[1];
+        },
+        error: function (data) {
+            alert("Error");
+            rtn = false;
+        }
+    });
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: ' ',
+        },
+        tooltip: {
+            trigger: 'axis'
+            //formatter: function (params) {
+            //    if (params[0] == null) {
+            //        return (params.data[0].cast);
+            //    }
+            //    output = params[0].name + '<br/>';
+            //    for (var i = 0; i < params.length; i++) {
+            //        output += params[i].seriesName + " : " + params[i].value[1] + params[i].value[2] + '<br/>';
+            //    }
+            //    return output;
+            //}
+        },
+        dataZoom: {
+            show: true,
+            start: 0,
+            orient: 'horizontal'
+        },
+        legend: {
+            data: ['流量', '降雨量', ],
+            top: 20,
+
+        },
+        xAxis: [
+        {
+            type: 'category',
+            data: axisData,
+
+        },
+        ],
+        yAxis: [
+        {
+            type: 'value',
+            name: '流量(m³/s)',
+            min:0,
+            axisLabel: {
+                formatter: '{value} '
+            },
+
+        },
+        {
+            type: 'value',
+            name: '降雨量(mm)',
+            min: 0,
+            axisLabel: {
+                formatter: '{value}  '
+            },
+            nameLocation: 'start',
+            inverse: true,
+        },
+        ],
+        series: [{
+            name: '流量',
+            type: 'bar',
+            data: streamFlowData,
+        }, {
+            name: '降雨量',
+            type: 'bar',
+            data: rainData,
+            yAxisIndex: 1
+        }, ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart_auto_chart_0.setOption(option);
+</script>
+
