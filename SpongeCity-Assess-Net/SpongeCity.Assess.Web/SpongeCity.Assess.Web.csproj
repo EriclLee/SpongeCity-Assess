@@ -185,6 +185,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Initialize.sql" />
+    <Content Include="App_Data\KPIParamsData.sql" />
+    <Content Include="App_Data\SubCategoryData.sql" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\sptheme\color\base.png" />
