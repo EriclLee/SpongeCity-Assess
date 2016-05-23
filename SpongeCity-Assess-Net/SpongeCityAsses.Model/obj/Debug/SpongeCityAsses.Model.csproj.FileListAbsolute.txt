@@ -13,3 +13,8 @@ C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\Sponge
 C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\obj\Debug\SpongeCityAsses.Model.csprojResolveAssemblyReference.cache
 C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\obj\Debug\SpongeCityAsses.Model.dll
 C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\obj\Debug\SpongeCityAsses.Model.pdb
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\bin\Debug\SpongeCityAsses.Model.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\bin\Debug\SpongeCityAsses.Model.pdb
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\obj\Debug\SpongeCityAsses.Model.csprojResolveAssemblyReference.cache
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\obj\Debug\SpongeCityAsses.Model.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCityAsses.Model\obj\Debug\SpongeCityAsses.Model.pdb

@@ -40,3 +40,17 @@ C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\Sponge
 C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\obj\Debug\SpongeCity.Asses.BLL.csprojResolveAssemblyReference.cache
 C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\obj\Debug\SpongeCity.Asses.BLL.dll
 C:\Users\etadmin\Documents\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\obj\Debug\SpongeCity.Asses.BLL.pdb
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\SpongeCity.Asses.BLL.dll.config
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\SpongeCity.Asses.BLL.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\SpongeCity.Asses.BLL.pdb
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\EntityFramework.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\SpongeCity.Assess.DAL.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\SpongeCityAsses.Model.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\SpongeCity.Assess.DAL.pdb
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\SpongeCityAsses.Model.pdb
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\EntityFramework.xml
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\obj\Debug\SpongeCity.Asses.BLL.csprojResolveAssemblyReference.cache
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\obj\Debug\SpongeCity.Asses.BLL.dll
+E:\GitHub\SpongeCity-Assess\SpongeCity-Assess-Net\SpongeCity.Asses.BLL\obj\Debug\SpongeCity.Asses.BLL.pdb

@@ -1,0 +1,119 @@
+﻿<div style="width:100%;height:270px; background-color:#fff">
+    <div id="auto_chart_0" style="width: 100%; height: 270px; position: relative; background-color: #fff;"></div>
+</div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        myChart_auto_chart_0 = echarts.init(document.getElementById('auto_chart_0'));
+
+        // 指定图表的配置项和数据
+        var option = {
+    title : {
+        text : ' ',
+    },
+    tooltip : {
+        trigger: 'axis',
+        formatter : function (params) {
+            if(params[0]==null){
+                return (params.data[0].cast);
+            }
+			output = params[0].name + '<br/>';
+			for(var i=0;i<params.length;i++){
+	 			output += params[i].seriesName + " : " + params[i].value[1] + params[i].value[2] +'<br/>';
+	 		}
+			return output;
+        }
+    },
+
+    legend : {
+        data : ['市政杂用水量','雨水收集利用量','雨水资源利用率',],
+        top : 20 ,
+
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : ['2015/01/17','2015/02/21','2015/03/14','2015/04/18','2015/05/16','2015/06/27','2015/07/18','2015/08/22','2015/09/19','2015/10/17','2015/11/21','2015/12/19','2016/01/16','2016/02/20','2016/03/19','2016/04/23',],
+
+        },
+    ],
+    yAxis : [
+        {
+            type : 'value' ,
+            name : '水量(万m³)' ,
+            axisLabel: {
+            	formatter : '{value} '
+            },
+
+        },
+        {  type : 'value' ,
+                    name : '利用率(%)' ,
+                    min : 0,
+                    max : 100,
+                    axisLabel: {
+            	        formatter : '{value}  '
+                    },
+                 },
+    ],
+    series : [{
+            name: '市政杂用水量',
+            type: 'bar',
+            data: [[0,9446.9,'万m³'],[1,9731,'万m³'],[2,7563.5,'万m³'],[3,9513.4,'万m³'],[4,6824.5,'万m³'],[5,10497.8,'万m³'],[6,7891.3,'万m³'],[7,8570.9,'万m³'],[8,7683.8,'万m³'],[9,8442.2,'万m³'],[10,9395.2,'万m³'],[11,10236.3,'万m³'],[12,8535.9,'万m³'],[13,6632.2,'万m³'],[14,8630.3,'万m³'],[15,8136.9,'万m³'],],
+        },{
+            name: '雨水收集利用量',
+            type: 'bar',
+            data: [[0,1189.7,'万m³'],[1,1123.1,'万m³'],[2,957.5,'万m³'],[3,785.2,'万m³'],[4,874.9,'万m³'],[5,991.7,'万m³'],[6,996.2,'万m³'],[7,708.1,'万m³'],[8,902.7,'万m³'],[9,760.2,'万m³'],[10,940.6,'万m³'],[11,1005.6,'万m³'],[12,910.4,'万m³'],[13,675.3,'万m³'],[14,914.4,'万m³'],[15,708.8,'万m³'],],
+        },{
+            name: '雨水资源利用率',
+            type: 'line',
+            data: [[0,12.59,' '],[1,11.54,' '],[2,12.66,' '],[3,8.25,' '],[4,12.82,' '],[5,9.45,' '],[6,12.62,' '],[7,8.26,' '],[8,11.75,' '],[9,9,' '],[10,10.01,' '],[11,9.82,' '],[12,10.67,' '],[13,10.18,' '],[14,10.6,' '],[15,8.71,' '],],yAxisIndex : 1,
+                        markLine:{
+                            data : [
+                                [
+                                     {
+                                          cast:'不达标:20%',
+                                          lineStyle:{
+                                            normal:{
+                                            type:'solid',
+                                            color:'#c44',
+                                            }
+                                          },
+                                          symbol :'rect',
+                                          symbolSize :1,
+                                          coord: [0, 20]
+                                     },
+                                     {
+                                          symbol :'rect',
+                                          symbolSize :1,
+                                          coord: [15, 20]
+                                     },
+                                ],
+                                [
+                                     {
+                                          cast:'达标:30%',
+                                          lineStyle:{
+                                            normal:{
+                                            type:'solid',
+                                            color:'#4c4',
+                                            }
+                                          },
+                                          symbol :'rect',
+                                          symbolSize :1,
+                                          coord: [0, 30]
+                                     },
+                                     {
+                                          symbol :'rect',
+                                          symbolSize :1,
+                                          coord: [15, 30]
+                                     },
+                                ],
+                            ],
+                        },
+
+        },]
+};
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart_auto_chart_0.setOption(option);
+        myChart_auto_chart_0.group = 'none_connect';
+</script>

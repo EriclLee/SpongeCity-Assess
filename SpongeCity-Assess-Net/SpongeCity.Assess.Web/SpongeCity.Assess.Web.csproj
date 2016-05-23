@@ -367,6 +367,15 @@
     <Content Include="Views\Report\AzureDeckerAdmin.cshtml" />
     <Content Include="Views\Activities\AzureDeckerAdmin.cshtml" />
     <Content Include="Views\Activities\GroundWaterLevel.cshtml" />
+    <Content Include="Views\Activities\EcologicalShorelineCoverAndSurvival.cshtml" />
+    <Content Include="Views\Activities\EcologicalShorelineRichAndLength.cshtml" />
+    <Content Include="Views\Activities\RiverWaterEnvironmentParam1.cshtml" />
+    <Content Include="Views\Activities\RiverWaterEnvironmentParam2.cshtml" />
+    <Content Include="Views\Activities\RiverWaterEnvironmentQuality.cshtml" />
+    <Content Include="Views\Activities\NPSP.cshtml" />
+    <Content Include="Views\Activities\WaterwaterReuseRate.cshtml" />
+    <Content Include="Views\Activities\PipeLeakageRate.cshtml" />
+    <Content Include="Views\Activities\RainwaterUtilization.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\ActivityData\" />

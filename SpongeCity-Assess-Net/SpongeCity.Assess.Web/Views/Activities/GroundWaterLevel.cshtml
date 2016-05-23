@@ -2,95 +2,77 @@
     <div id="auto_chart_0" style="width: 100%; height: 270px; position: relative; background-color: #fff;"></div>
 </div>
 <script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    myChart_auto_chart_0 = echarts.init(document.getElementById('auto_chart_0'));
-    var axisData = [];
-    var rainData = [];
-    var streamFlowData = [];
-    $.ajax({
-        url: "/ActivityData/GetChartData?subCategoryId=@ViewBag.SubCategoryId&viewId=@ViewBag.ViewId&kpiId=@ViewBag.KpiId&categoryId=@ViewBag.CategoryId",
-        type: "get",
-        async: false,
-        dataType: "json",
-        data: { "paramS": "1,2", "rnd": Math.random() },
-        success: function (data) {
-            axisData = data.XD;
-            rainData = data.KD[0];
-            streamFlowData = data.KD[1];
-        },
-        error: function (data) {
-            alert("Error");
-            rtn = false;
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('auto_chart_0'));
+
+        // 指定图表的配置项和数据
+        var option = {
+    title : {
+        text : '',
+//        subtext : 'dataZoom支持'
+    },
+    tooltip : {
+        trigger: 'axis',
+        formatter : function (params) {
+            var date = new Date(params[0].value[0]);
+            data = date.getFullYear() + '-'
+                   + (date.getMonth() + 1) + '-'
+                   + date.getDate() + ' '
+                   + date.getHours() + ':'
+                   + date.getMinutes();
+
+			output = data + '<br/>';
+			for(var i=0;i<params.length;i++){
+	 			output += params[i].seriesName + " - " + params[i].value[1] + 'm'+'<br/>';
+	 		}
+			return output;
         }
-    });
-    // 指定图表的配置项和数据
-    var option = {
-        title: {
-            text: ' ',
-        },
-        tooltip: {
-            trigger: 'axis'
-            //formatter: function (params) {
-            //    if (params[0] == null) {
-            //        return (params.data[0].cast);
-            //    }
-            //    output = params[0].name + '<br/>';
-            //    for (var i = 0; i < params.length; i++) {
-            //        output += params[i].seriesName + " : " + params[i].value[1] + params[i].value[2] + '<br/>';
-            //    }
-            //    return output;
-            //}
-        },
-        dataZoom: {
-            show: true,
-            start: 0,
-            orient: 'horizontal'
-        },
-        legend: {
-            data: ['流量', '降雨量', ],
-            top: 20,
-
-        },
-        xAxis: [
+    },
+    dataZoom: {
+        show: true,
+        start : 0
+    },
+    legend : {
+        data : ['3#检测井','4#检测井',]
+    },
+    xAxis : [
         {
-            type: 'category',
-            data: axisData,
-
-        },
-        ],
-        yAxis: [
+            type : 'time',
+            splitNumber:10
+        }
+    ],
+    yAxis : [
         {
-            type: 'value',
-            name: '流量(m³/s)',
-            min:0,
+            type : 'value' ,
+            name : '地下水埋深(m)' ,
             axisLabel: {
-                formatter: '{value} '
-            },
+            	formatter : '{value}m'
+            }
+        }
+    ],
+    series : [{
+            name: '3#检测井',
+            type: 'line',
+            smooth: true,
+            data: (function () {
+                var d = [];
+				d.push([new Date(1441209600000),7.29]);d.push([new Date(1442332800000),5.42]);d.push([new Date(1443110400000),3.07]);d.push([new Date(1443801600000),3.82]);d.push([new Date(1444924800000),6.84]);d.push([new Date(1445702400000),3.28]);d.push([new Date(1446480000000),3.54]);d.push([new Date(1447603200000),5.69]);d.push([new Date(1448380800000),7.95]);d.push([new Date(1449072000000),7.92]);d.push([new Date(1450195200000),5.23]);d.push([new Date(1450972800000),6.85]);d.push([new Date(1452009600000),6.74]);d.push([new Date(1453046400000),7.01]);d.push([new Date(1453996800000),5.6]);d.push([new Date(1454428800000),5.42]);d.push([new Date(1455552000000),6.36]);d.push([new Date(1456675200000),5.25]);d.push([new Date(1457193600000),3.62]);d.push([new Date(1458230400000),4.33]);d.push([new Date(1459180800000),3.74]);d.push([new Date(1459872000000),6.46]);d.push([new Date(1460908800000),4.23]);
+                return d;
+            })()
+        },{
+            name: '4#检测井',
+            type: 'line',
+            smooth: true,
+            data: (function () {
+                var d = [];
+				d.push([new Date(1441209600000),5.43]);d.push([new Date(1442332800000),7.77]);d.push([new Date(1443110400000),7.17]);d.push([new Date(1443801600000),4.41]);d.push([new Date(1444924800000),4.91]);d.push([new Date(1445702400000),5.08]);d.push([new Date(1446480000000),5.52]);d.push([new Date(1447603200000),4.32]);d.push([new Date(1448380800000),3.9]);d.push([new Date(1449072000000),4.63]);d.push([new Date(1450195200000),5.64]);d.push([new Date(1450972800000),6.53]);d.push([new Date(1452009600000),3.49]);d.push([new Date(1453046400000),5.41]);d.push([new Date(1453996800000),3.99]);d.push([new Date(1454428800000),6.54]);d.push([new Date(1455552000000),6.38]);d.push([new Date(1456675200000),8]);d.push([new Date(1457193600000),4.93]);d.push([new Date(1458230400000),5.98]);d.push([new Date(1459180800000),4.91]);d.push([new Date(1459872000000),6.6]);d.push([new Date(1460908800000),4.41]);
+                return d;
+            })()
+        },]
+};
 
-        },
-        {
-            type: 'value',
-            name: '降雨量(mm)',
-            min: 0,
-            axisLabel: {
-                formatter: '{value}  '
-            },
-            nameLocation: 'start',
-            inverse: true,
-        },
-        ],
-        series: [{
-            name: '流量',
-            type: 'bar',
-            data: streamFlowData,
-        }, {
-            name: '降雨量',
-            type: 'bar',
-            data: rainData,
-            yAxisIndex: 1
-        }, ]
-    };
-    // 使用刚指定的配置项和数据显示图表。
-    myChart_auto_chart_0.setOption(option);
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
 </script>
 

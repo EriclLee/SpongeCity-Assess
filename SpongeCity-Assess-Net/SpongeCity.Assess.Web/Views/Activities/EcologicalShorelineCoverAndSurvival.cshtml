@@ -1,0 +1,66 @@
+﻿<div style="width:100%;height:270px; background-color:#fff">
+    <div id="auto_chart_0" style="width: 100%; height: 270px; position: relative; background-color: #fff;"></div>
+</div>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        myChart_auto_chart_0 = echarts.init(document.getElementById('auto_chart_0'));
+
+        // 指定图表的配置项和数据
+        var option = {
+    title : {
+        text : ' ',
+    },
+    tooltip : {
+        trigger: 'axis',
+        formatter : function (params) {
+            if(params[0]==null){
+                return (params.data[0].cast);
+            }
+			output = params[0].name + '<br/>';
+			for(var i=0;i<params.length;i++){
+	 			output += params[i].seriesName + " : " + params[i].value[0] + params[i].value[2] +'<br/>';
+	 		}
+			return output;
+        }
+    },
+
+    legend : {
+        data : ['2014年度','2015年度',],
+        top : 20 ,
+
+    },
+    yAxis : [
+        {
+            type : 'category',
+            data : ['成活率','盖率',],
+
+        },
+    ],
+    xAxis : [
+        {
+            type : 'value' ,
+            name : ' ' ,
+            axisLabel: {
+            	formatter : '{value} '
+            },
+
+        },
+
+    ],
+    series : [{
+            name: '2014年度',
+            type: 'bar',
+            data: [[85,0,'%'],[6,1,'%'],],
+        },{
+            name: '2015年度',
+            type: 'bar',
+            data: [[92,0,'%'],[100,1,'%'],],
+        },]
+};
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart_auto_chart_0.setOption(option);
+        myChart_auto_chart_0.group = 'none_connect';
+</script>

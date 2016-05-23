@@ -1,0 +1,69 @@
+﻿<div style="width:100%;height:270px; background-color:#fff">
+    <div id="auto_chart_4" style="width: 100%; height: 270px; position: relative; background-color: #fff;"></div>
+</div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        myChart_auto_chart_4 = echarts.init(document.getElementById('auto_chart_4'));
+
+        // 指定图表的配置项和数据
+        var option = {
+    title : {
+        text : '水质参数',
+    },
+    tooltip : {
+        trigger: 'axis',
+        formatter : function (params) {
+            if(params[0]==null){
+                return (params.data[0].cast);
+            }
+			output = params[0].name + '<br/>';
+			for(var i=0;i<params.length;i++){
+	 			output += params[i].seriesName + " : " + params[i].value[1] + params[i].value[2] +'<br/>';
+	 		}
+			return output;
+        }
+    },
+    dataZoom: {
+        show: true,
+        start : 0,
+        orient : 'horizontal'
+    },
+    legend : {
+        data : ['上游-水质','下游-水质',],
+        top : 20 ,
+
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : ['2015/01/17','2015/02/21','2015/03/14','2015/04/18','2015/05/16','2015/06/27','2015/07/18','2015/08/22','2015/09/19','2015/10/17','2015/11/21','2015/12/19','2016/01/16','2016/02/20','2016/03/19','2016/04/23',],
+
+        },
+    ],
+    yAxis : [
+        {
+            type : 'value' ,
+            name : ' ' ,
+            axisLabel: {
+            	formatter : '{value} '
+            },
+
+        },
+
+    ],
+    series : [{
+            name: '上游-水质',
+            type: 'bar',
+            data: [[0,4,' '],[1,4,' '],[2,4,' '],[3,4,' '],[4,4,' '],[5,4,' '],[6,4,' '],[7,4,' '],[8,4,' '],[9,4,' '],[10,4,' '],[11,4,' '],[12,4,' '],[13,4,' '],[14,4,' '],[15,4,' '],],
+        },{
+            name: '下游-水质',
+            type: 'bar',
+            data: [[0,4,' '],[1,4,' '],[2,4,' '],[3,4,' '],[4,4,' '],[5,4,' '],[6,4,' '],[7,4,' '],[8,4,' '],[9,4,' '],[10,4,' '],[11,4,' '],[12,4,' '],[13,4,' '],[14,4,' '],[15,4,' '],],
+        },]
+};
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart_auto_chart_4.setOption(option);
+        myChart_auto_chart_4.group = 'group1';
+</script>
